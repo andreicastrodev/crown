@@ -2,23 +2,21 @@
   display: flex;
   align-items: center;
   padding: 5rem;
-    justify-content: space-between;
+  justify-content: space-between;
   &__logo-container {
   }
 
   &__logo {
-      height: 8rem;
-      width: 8rem;
-
-    
+    height: 8rem;
+    width: 8rem;
   }
 
   &__options {
-      display: flex;
-      justify-content: flex-end;
-      justify-content: space-around;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
   }
-
+  &__option,
   &__option:link,
   &__option:visited,
   &__option:active {

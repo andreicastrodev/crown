@@ -1,0 +1,16 @@
+.custom-btn {
+  outline: none;
+  cursor: pointer;
+  padding: 1.5rem 5rem;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  outline: none;
+  border: none;
+  &--google {
+    background-color: #4285f4;
+
+    margin-left: 2rem;
+  }
+}
