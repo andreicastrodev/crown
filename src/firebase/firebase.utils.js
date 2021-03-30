@@ -7,8 +7,33 @@ const config = {
   authDomain: "crown-1-a8cfd.firebaseapp.com",
   projectId: "crown-1-a8cfd",
   storageBucket: "crown-1-a8cfd.appspot.com",
-  messagingSenderId: "180129077060",
+  messagingSenderId:  "180129077060",
   appId: "1:180129077060:web:226d6f440bb35cee8da911",
+};
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapShot = await userRef.get();
+  console.log(snapShot);
+
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  return userRef;
 };
 
 firebase.initializeApp(config);
