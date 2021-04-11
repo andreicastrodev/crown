@@ -23,15 +23,17 @@
     .name {
       width: 90%;
       margin-bottom: 15px;
+      font-weight: 700;
     }
 
     .price {
       width: 10%;
+      font-weight: 700;
     }
   }
 }
 
-.custom-btn {
+.buttons {
   position: absolute;
   top: 20rem;
 }
