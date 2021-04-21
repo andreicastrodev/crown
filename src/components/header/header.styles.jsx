@@ -9,6 +9,14 @@ const OptionContainerStyles = css`
   margin-right: 5rem;
 `;
 
+export const SignOut = css`
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  margin-right: 5rem;
+`;
+
 export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
